@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f4f4f4;
+        }
+
+        .logo img {
+            width: 164px;
+        }
+
+        .right ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .right ul li {
+            display: flex;
+            align-items: center;
+        }
+
+        .right ul li img {
+            margin-left: 5px;
+        }
+
+        /* Hide the menu icon initially */
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .right ul {
+                display: none; /* Hide the menu initially */
+                flex-direction: column;
+                gap: 10px;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: white;
+                border: 1px solid #ccc;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                padding: 10px;
+            }
+
+            .right ul.active {
+                display: flex; /* Show the menu when active */
+            }
+
+            .menu-icon {
+                display: block; /* Show the hamburger menu icon */
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="UltraEdit Logo">
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Menu Icon" width="30">
+        </div>
+        <div class="right">
+            <ul>
+                <li><span>Products</span><img src="down.png" height="16px" width="16px" alt="Dropdown Icon"></li>
+                <li><span>Pricing</span><img src="down.png" height="16px" width="16px" alt="Dropdown Icon"></li>
+                <li><span>Resources</span><img src="down.png" height="16px" width="16px" alt="Dropdown Icon"></li>
+                <li><span>About us</span><img src="down.png" height="16px" width="16px" alt="Dropdown Icon"></li>
+                <li><span>Security and compliance</span></li>
+                <li>
+                    <img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt="Language Selector">
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+    <section class="first">
+        <span>Download <b>UltraEdit</b> for Windows <img src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" width="90px" height="26px"></span>
+    <p>Download and try UltraEdit before you buy it! This download includes the full Windows version of the text editor.</p>
+    <button class="btn">DOWNLOAD MAC OR LINUX VERSION</button>
+    </section>
+    <section class="second">
+        <div class="download">
+            <img src="https://www.ultraedit.com/wp-content/uploads/2022/11/UE.png" alt="">
+            <span>Download UltraEdit</span>
+            <span class="small">v2023.2(released 2023/12/15) | Hotfix</span>
+        </div>
+        <div class="grid">
+            <div class="items">
+                <div class="items-lang">English</div>
+                <button class="btn"><a href="/ue_english.exe">Download 32-bit</a></button>
+                <button class="btn green"><a href="/ue_english.exe">Download 64-bit</a></button>
+            </div>
+            <div class="items">
+                <div class="items-lang">Deutsch</div>
+                <button class="btn"><a href="/ue_english.exe">Download 32-bit</a></button>
+                <button class="btn green"><a herf="/ue_english.exe">Download 64-bit</a></button>
+            </div>
+            <div class="items">
+                <div class="items-lang">Italiano</div>
+                <button class="btn"><a href="/ue_english.exe">Download 32-bit</a></button>
+                <button class="btn green"><a href="/ue_english.exe">Download 64-bit</a></button>
+            </div>
+            <div class="items">
+                <div class="items-lang">Espanol</div>
+                <button class="btn"><a href="/ue_english.exe">Download 32-bit</a></button>
+                <button class="btn green"><a href="/ue_english.exe">Download 64-bit</a></button>
+            </div>
+            <div class="items">
+                <div class="items-lang">francias</div>
+                <button class="btn"><a href="/ue_english.exe">Download 32-bit</a></button>
+                <button class="btn green"><a href="/ue_english.exe">Download 64-bit</a></button>
+            </div>
+            <div class="items">
+                <div class="items-lang">Portugues</div>
+                <button class="btn"><a href="/ue_english.exe">Download 32-bit</a></button>
+                <button class="btn green"><a href="/ue_english.exe">Download 64-bit</a></button>
+            </div>
+            <div class="items">
+                <div class="items-lang">Japanese</div>
+                <button class="btn"><a href="/ue_english.exe">Download 32-bit</a></button>
+                <button class="btn green"><a href="/ue_english.exe">Download 64-bit</a></button>
+            </div>
+            <div class="items">
+                <div class="items-lang">Korean</div>
+                <button class="btn"><a href="/ue_english.exe">Download 32-bit</a></button>
+                <button class="btn green"><a href="/ue_english.exe">Download 64-bit</a></button>
+            </div>
+            <div class="items">
+                <div class="items-lang">Chinese</div>
+                <button class="btn"><a href="/ue_english.exe">Download 32-bit</a></button>
+                <button class="btn green"><a href="/ue_english.exe">Download 64-bit</a></button>
+            </div>
+            <div class="items">
+                <div class="items-lang">Traditional Chinese</div>
+                <button class="btn"><a href="/ue_english.exe">Download 32-bit</a></button>
+                <button class="btn green"><a href="/ue_english.exe">Download 64-bit</a></button>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
+    <script>
+        // JavaScript to toggle the menu on small screens
+        function toggleMenu() {
+            const menu = document.querySelector('.right ul');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
